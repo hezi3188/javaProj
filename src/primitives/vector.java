@@ -28,7 +28,7 @@ public class vector {
 	pointD3 point;
 
 	public vector(pointD3 point) {
-		this.point = point;
+		this.point = new pointD3(point) ;
 	}
 
 	@Override

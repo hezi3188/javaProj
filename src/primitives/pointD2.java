@@ -4,34 +4,19 @@ import java.util.Arrays;
 import java.util.Objects;
 
 
-/**
- * Javadoc formatted documentation
- */
 
 
-	// ***************** Administration  ******************** //
-
-	/**
-	 * Javadoc formatted documentation
-	 */
 
 
-	/**
-	 * Javadoc formatted documentation
-	 */
-
-
-	// ***************** Operations ******************** //
 
 public class pointD2 {
-		Coordinate x;
-		Coordinate y;
+		protected Coordinate x;
+		protected Coordinate y;
 
 		// ***************** Constructors ********************** //
 		public pointD2(Coordinate x, Coordinate y) {
-			this.point = new Coordinate[2];
-			point[0] = x;
-			point[1] = y;
+			this.x=new Coordinate(x);
+			this.y=new Coordinate(y);
 		}
 
 		public pointD2() {
@@ -43,7 +28,8 @@ public class pointD2 {
 			setY(p.getY());
 		}
 
-		@Override
+	// ***************** Operations ******************** //
+	@Override
 		public boolean equals(Object o) {
 			if (this == o) return true;
 			if (o == null || getClass() != o.getClass()) return false;
@@ -76,4 +62,18 @@ public class pointD2 {
 					", y=" + y +
 					'}';
 		}
-	}
+		// ***************** Administration  ******************** //
+		public vector substract(pointD2 p){
+			return  new vector(p,this);
+		}
+		public pointD2 add(vector v){
+				return (new pointD2());
+		}
+		public double distance(pointD2 p){
+				return 5;
+		}
+		public double powDistance(pointD2 p){
+			return 5;
+		}
+
+}
