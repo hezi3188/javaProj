@@ -70,18 +70,40 @@ public class pointD3 extends pointD2 {
 
 	// ***************** Administration  ******************** //
 
-    @Override
-	public vector substract(pointD2 p){
-		return  new vector(p,this);
+
+	public ray substract(pointD3 p){
+		return new ray(new pointD3(p),this.ReturnSubbstractVector(p));
+	}
+
+	private vector ReturnSubbstractVector(pointD3 p){
+		return new vector(
+				new pointD3(
+						this.getX().subtract(p.getY()),
+						this.getY().subtract(p.getY()),
+						this.getZ().subtract(p.getZ())
+				)
+		);
 	}
 	@Override
-	public pointD2 add(vector v){
-		return (new pointD2());
+	public pointD3 add(vector v){
+		return (new pointD3(
+				this.getX().add(v.getPoint().getX()),
+				this.getY().add(v.getPoint().getY()),
+				this.getZ().add(v.getPoint().getZ())
+		));
 	}
-	@Override
-	public double distance(pointD2 p){
-		return 5;
+
+	public double powDistance(pointD3 p){
+		Coordinate x = (this.getX().subtract(p.getX())).multiply(this.getX().subtract(p.getX()));
+		Coordinate y = (this.getY().subtract(p.getY())).multiply(this.getY().subtract(p.getY()));
+		Coordinate z = (this.getZ().subtract(p.getZ())).multiply(this.getZ().subtract(p.getZ()));
+		return x.add(y.add(z)).get();
 	}
+
+	public  double Distance(pointD3 p){
+		return Math.sqrt(this.powDistance(p));
+	}
+
 	@Override
 	public double powDistance(pointD2 p){
 		return 5;

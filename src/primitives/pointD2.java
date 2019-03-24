@@ -64,7 +64,7 @@ public class pointD2 {
 		}
 		// ***************** Administration  ******************** //
 		public vector substract(pointD2 p){
-			return  new vector(p,this);
+
 		}
 		public pointD2 add(vector v){
 				return (new pointD2());

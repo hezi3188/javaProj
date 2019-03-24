@@ -1,30 +1,7 @@
 package primitives;
-
-
-
-/**
- * Javadoc formatted documentation
- */
-// ***************** Constructors ********************** //
-
-// ***************** Getters/Setters ********************** //
-
-
-/**
- * Javadoc formatted documentation
- */
-
-
-/**
- * Javadoc formatted documentation
- */
-
-
-// ***************** Operations ******************** //
-
-
 public class vector {
 	pointD3 point;
+// ***************** Constructors ********************** //
 
 	public vector() {
 		this.point = new pointD3();
@@ -39,6 +16,7 @@ public class vector {
 	public pointD3 getPoint() {
 		return new pointD3(point) ;
 	}
+// ***************** Getters/Setters ********************** //
 
 	public void setPoint(pointD3 point) {
 		this.point = new pointD3(point);
