@@ -1,5 +1,5 @@
 package geometries;
-import primitives;
+import primitives.*;
 
 public class Plane {
     protected pointD3 a;
