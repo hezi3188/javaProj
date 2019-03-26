@@ -1,4 +1,6 @@
 package geometries;
 import primitives.*;
 
-public class Tube extends  RadialGeometry{}
+public class Tube implements  RadialGeometry{
+    protected ray center;
+}
