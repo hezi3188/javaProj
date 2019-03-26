@@ -78,7 +78,7 @@ public class pointD3 extends pointD2 {
 	private vector ReturnSubbstractVector(pointD3 p){
 		return new vector(
 				new pointD3(
-						this.getX().subtract(p.getY()),
+						this.getX().subtract(p.getX()),
 						this.getY().subtract(p.getY()),
 						this.getZ().subtract(p.getZ())
 				)
