@@ -56,7 +56,7 @@ public class pointD3 extends pointD2 {
 		if (o == null || getClass() != o.getClass()) return false;
 		if (!super.equals(o)) return false;
 		pointD3 pointD3 = (pointD3) o;
-		return Objects.equals(z, pointD3.z);
+		return Objects.equals(z, pointD3.z) && super.equals(o);
 	}
 
 	@Override
@@ -105,6 +105,8 @@ public class pointD3 extends pointD2 {
 	}
 
 
-
-
+	public boolean isZero() {
+		if(getX().isZero() && getY().isZero() && getZ().isZero())return true;
+		return false;
+	}
 }

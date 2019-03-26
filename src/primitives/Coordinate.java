@@ -52,5 +52,8 @@ public final class Coordinate {
 	public Coordinate multiply(Coordinate other) {
 		return new Coordinate(uscale(_coord, other._coord));
 	}
-	
+
+	public boolean isZero() {
+		return Util.isZero(_coord);
+	}
 }

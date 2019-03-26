@@ -77,6 +77,11 @@ public class vector {
 		);
 	}
 
+	public Boolean isZero(vector vec){
+		if(vec.getPoint().isZero()) return true;
+		return false;
+	}
+
 	public double length (){
 		return  this.getPoint().Distance(new pointD3());
 	}
@@ -109,7 +114,9 @@ public class vector {
 		z=new Coordinate(this.getPoint().getZ());
 		return new vector(
 				new pointD3(
-						x.di
+						x.scale(1/normal),
+						y.scale(1/normal),
+						z.scale(1/normal)
 				)
 		);
 	}

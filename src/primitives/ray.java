@@ -1,5 +1,7 @@
 package primitives;
 
+import java.util.Objects;
+
 public class ray extends vector {
 	pointD3 start;
 /**
@@ -29,12 +31,26 @@ public class ray extends vector {
 	}
 
 // ***************** Administration  ******************** //
+
 	@Override
 	public String toString() {
-		return "ray [strat=" + start + ", vec=" + vec + "]";
+		return "ray{" +
+				"start=" + start +
+				", point=" + point +
+				'}';
 	}
 
 // ***************** Operations ******************** //
+	private vector RayToVec(){
+		return new vector(start.add((vector)this));
+	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		ray ray = (ray) o;
+		return start.equals(ray.start) && super.equals(o);
+	}
 
 }
