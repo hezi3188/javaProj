@@ -78,7 +78,7 @@ public class vector {
 	}
 
 	public double length (){
-		return  3;
+		return  this.getPoint().Distance(new pointD3());
 	}
 	public vector crossProduct(vector vec){
 		Coordinate x1,y1,z1,x2,y2,z2,newX,newY,newZ;
@@ -89,26 +89,29 @@ public class vector {
 		y2=new Coordinate(vec.getPoint().getY());
 		z2=new Coordinate(vec.getPoint().getZ());
 		newX=new Coordinate(
-				(
-
-				)
+				(y1.multiply(z2)).subtract(z1.multiply(y2))
+		);
+		newY=new Coordinate(
+				(z1.multiply(x1)).subtract(x1.multiply(z2))
+		);
+		newZ=new Coordinate(
+				(x1.multiply(y2)).subtract(y1.multiply(x2))
 		);
 		return  new vector(
-				new pointD3(
-						this.getPoint().getX().subtract(
-								new Coordinate(vec.getPoint().getX())
-						),
-						this.getPoint().getY().subtract(
-								new Coordinate(vec.getPoint().getY())
-						),
-						this.getPoint().getZ().subtract(
-								new Coordinate(vec.getPoint().getZ())
-						)
-				)
+				new pointD3(newX,newY,newZ)
 		);
 	}
 	public vector normalize(){
-		return  this;
+		double normal=length();
+		Coordinate x,y,z;
+		x=new Coordinate(this.getPoint().getX());
+		y=new Coordinate(this.getPoint().getY());
+		z=new Coordinate(this.getPoint().getZ());
+		return new vector(
+				new pointD3(
+						x.di
+				)
+		);
 	}
 
 }
