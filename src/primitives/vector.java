@@ -29,13 +29,20 @@ public class vector {
 
 	// ***************** Administration  ******************** //
 	public vector add(vector vec){
-		return this;
+		return new vector(new pointD3(this.getPoint().add(vec)));
 	}
 	public vector substract(vector vec){
-		return  this;
+		return  ;
 	}
-	public vector mult(double scalar){
-		return  this;
+	public vector multScalar(double scalar){
+		Coordinate Scal = new Coordinate(scalar);
+		return  new vector(
+				new pointD3(
+						this.getPoint().getX().multiply(Scal),
+						this.getPoint().getY().multiply(Scal),
+						this.getPoint().getZ().multiply(Scal)
+				)
+		);
 	}
 	public double dotProduct(vector vec){
 		return  3;

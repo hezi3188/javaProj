@@ -104,9 +104,7 @@ public class pointD3 extends pointD2 {
 		return Math.sqrt(this.powDistance(p));
 	}
 
-	@Override
-	public double powDistance(pointD2 p){
-		return 5;
-	}
+
+
 
 }

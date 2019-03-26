@@ -63,17 +63,21 @@ public class pointD2 {
 					'}';
 		}
 		// ***************** Administration  ******************** //
-		public vector substract(pointD2 p){
-
+		public pointD2 substract(pointD2 p){
+			return new pointD2(this.getX().subtract(p.getY()),this.getY().subtract(p.getY()));
 		}
 		public pointD2 add(vector v){
-				return (new pointD2());
+			return new pointD2(
+					this.getX().add(v.getPoint().getX()),
+					this.getY().add(v.getPoint().getY()));
 		}
 		public double distance(pointD2 p){
-				return 5;
+			return Math.sqrt(this.powDistance(p));
 		}
 		public double powDistance(pointD2 p){
-			return 5;
+			Coordinate x = (this.getX().subtract(p.getX())).multiply(this.getX().subtract(p.getX()));
+			Coordinate y = (this.getY().subtract(p.getY())).multiply(this.getY().subtract(p.getY()));
+			return x.add(y).get();
 		}
 
 }
