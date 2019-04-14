@@ -30,7 +30,7 @@ public class pointD3 extends pointD2 {
 
 	public pointD3(Coordinate x,Coordinate y,Coordinate z) {
 		super(x,y);
-		this.z=z;
+		this.z=new Coordinate(z);
 	}
 	public  pointD3(pointD3 p){
 		super(p);
@@ -62,9 +62,9 @@ public class pointD3 extends pointD2 {
 	@Override
 	public String toString() {
 		return "pointD3{" +
-				"z=" + z +
-				", x=" + x +
+				"x=" + x +
 				", y=" + y +
+				", z=" + z +
 				'}';
 	}
 

@@ -1,4 +1,7 @@
 package primitives;
+
+import java.util.Objects;
+
 public class vector {
 	pointD3 point;
 // ***************** Constructors ********************** //
@@ -22,7 +25,20 @@ public class vector {
 		this.point = new pointD3(point);
 	}
 
-	@Override
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        vector vector = (vector) o;
+        return point.equals(vector.point);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(point);
+    }
+
+    @Override
 	public String toString() {
 		return "vector [point=" + point + "]";
 	}
@@ -97,7 +113,7 @@ public class vector {
 				(y1.multiply(z2)).subtract(z1.multiply(y2))
 		);
 		newY=new Coordinate(
-				(z1.multiply(x1)).subtract(x1.multiply(z2))
+				(z1.multiply(x2)).subtract(x1.multiply(z2))
 		);
 		newZ=new Coordinate(
 				(x1.multiply(y2)).subtract(y1.multiply(x2))

@@ -48,7 +48,7 @@ public class pointD2 {
 		}
 
 		public Coordinate getX() {
-			return new Coordinate(y);
+			return new Coordinate(x);
 		}
 
 		public void setX(Coordinate x) {
