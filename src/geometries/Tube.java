@@ -1,7 +1,7 @@
 package geometries;
 import primitives.*;
 
-public class Tube extends RadialGeometry {
+public class Tube extends RadialGeometry implements Geometry {
     protected ray center;
 
     public Tube(double radius, ray center) {
@@ -19,5 +19,10 @@ public class Tube extends RadialGeometry {
                 "center=" + center +
                 ", _radius=" + _radius +
                 '}';
+    }
+
+    @Override
+    public vector getNormal(pointD3 a) {
+        return null;
     }
 }

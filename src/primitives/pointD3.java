@@ -71,8 +71,8 @@ public class pointD3 extends pointD2 {
 	// ***************** Administration  ******************** //
 
 
-	public ray substract(pointD3 p){
-		return new ray(new pointD3(p),this.ReturnSubbstractVector(p));
+	public vector substract(pointD3 p){
+		return new vector(this.ReturnSubbstractVector(p));
 	}
 
 	private vector ReturnSubbstractVector(pointD3 p){

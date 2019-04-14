@@ -8,8 +8,8 @@ public class T0 {
         double d4 = 1234567876543.21;
         double d5 = 4.6;
         double d6 = 1.2;
-        pointD3 P1 = new pointD3(new Coordinate(d2),new Coordinate(d5),new Coordinate(d6));
-        pointD3 P2 = new pointD3(new Coordinate(d5),new Coordinate(d6),new Coordinate(d1));
+        pointD3 P1 = new pointD3(new Coordinate(1.5),new Coordinate(3),new Coordinate(0));
+        pointD3 P2 = new pointD3(new Coordinate(0),new Coordinate(2),new Coordinate(0));
         vector T1,T2;
         T1 = new vector(P1);
         T2 = new vector(P2);
@@ -28,7 +28,7 @@ public class T0 {
         System.out.println("T2: "+T2);
         System.out.println("T1.dotProduct(T2): "+T1.dotProduct(T2));
         System.out.println("T1.crossProduct(T2): "+T1.crossProduct(T2));
-        System.out.println("T1.crossProduct(T2).crossProduct(T2): "+T1.crossProduct(T2).crossProduct(T2).normalize());
+        System.out.println("T1.crossProduct(T2).crossProduct(T2).normalize(): "+T1.crossProduct(T2).crossProduct(T2).normalize());
         System.out.println("T1.normalize(): "+T1.normalize());
         System.out.println("T1.normalize().equals(T1.normalize()): "+T1.normalize().equals(T1.normalize()));
         System.out.println("T1.normalize().equals(T1.normalize()): "+T1.normalize().equals(T2.normalize()));
