@@ -90,7 +90,7 @@ public class vector {
 		);
 	}
 
-	public Boolean isZero(vector vec){
+	public static Boolean isZero(vector vec){
 		if(vec.getPoint().isZero()) return true;
 		return false;
 	}

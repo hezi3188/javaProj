@@ -35,6 +35,11 @@ public class T0 {
         System.out.println("T1.length(): "+T1.length());
         System.out.println("T1.normalize().length(): "+T1.normalize().length());
         System.out.println("T2.normalize().length(): "+T2.normalize().length());
+        System.out.println("T1.add(T2): "+T1.add(T2));
+        System.out.println("T1.add(T2).substract(T1): "+T1.add(T2).substract(T1));
+        System.out.println("T1.add(T2).substract(T1).equals(T2)): "+T1.add(T2).substract(T1).equals(T2));
+        System.out.println("T1.multScalar(T2.length()): "+T1.multScalar(T2.length()));
+        System.out.println("vector.isZero(T1.substract(T1)): "+vector.isZero(T1.substract(T1)));
 
     }
 }
