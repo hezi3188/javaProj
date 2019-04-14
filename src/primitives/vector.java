@@ -63,24 +63,21 @@ public class vector {
 		);
 	}
 	public double dotProduct(vector vec){
-		vector temp=  new vector(
-				new pointD3(
-						this.getPoint().getX().multiply(
-								new Coordinate(vec.getPoint().getX())
-						),
-						this.getPoint().getY().multiply(
-								new Coordinate(vec.getPoint().getY())
-						),
-						this.getPoint().getZ().multiply(
-								new Coordinate(vec.getPoint().getZ())
-						)
-				)
-		);
+		Coordinate tempX=this.getPoint().getX().multiply(
+								vec.getPoint().getX());
+
+        Coordinate tempY=this.getPoint().getY().multiply(
+                vec.getPoint().getY());
+
+        Coordinate tempZ=this.getPoint().getZ().multiply(
+                vec.getPoint().getZ());
+
 		return new Coordinate(
-				this.getPoint().getX().add(
-						this.getPoint().getY()).add(
-								this.getPoint().getZ())
-		).get();
+                tempX.add(
+                        tempY.add(
+                                tempZ)
+                )
+        ).get();
 	}
 	public vector multScalar(double scalar){
 		Coordinate Scal = new Coordinate(scalar);
