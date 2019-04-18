@@ -11,7 +11,7 @@ public class T0 {
         double d6 = 1.2;
         pointD3 P1 = new pointD3(new Coordinate(2),new Coordinate(2),new Coordinate(0));
         pointD3 P2 = new pointD3(new Coordinate(1),new Coordinate(0),new Coordinate(5));
-        pointD3 P4 = new pointD3(new Coordinate(0),new Coordinate(8),new Coordinate(8));
+        pointD3 P4 = new pointD3(new Coordinate(0),new Coordinate(2),new Coordinate(8));
         pointD3 P5 = new pointD3(new Coordinate(1),new Coordinate(1),new Coordinate(10));
         vector T1,T2;
         Plane PL;
@@ -44,14 +44,13 @@ public class T0 {
         System.out.println("T1.add(T2).substract(T1).equals(T2)): "+T1.add(T2).substract(T1).equals(T2));
         System.out.println("T1.multScalar(T2.length()): "+T1.multScalar(T2.length()));
         System.out.println("vector.isZero(T1.substract(T1)): "+vector.isZero(T1.substract(T1)));
-        PL = new Plane(P1,P2,P4);
-        System.out.println("PL: "+PL);
-        System.out.println("PL.getZofPlane(): "+PL.getZofPlane());
-        Plane PL2 = new Plane(P1,T2);
+        PL = new Plane(P1,P2,P3);
         ray cu = new ray(P4,new vector(P5));
         System.out.println("cu: "+cu);
         System.out.println("PL: "+PL);
         System.out.println("PL.getZofPlane(): "+PL.getZofPlane());
         System.out.println("PL.findIntersections(cu).get(0): "+PL.findIntersections(cu).get(0));
+        System.out.println("cu.getStart(): "+cu.getStart());
+        System.out.println("PL.findIntersections(cu).get(0).distance(cu.getStart()): "+PL.findIntersections(cu).get(0).distance(cu.getStart()));
     }
 }
