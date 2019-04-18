@@ -1,6 +1,8 @@
 package geometries;
 import primitives.*;
 
+import java.util.List;
+
 public class Sphere extends RadialGeometry implements Geometry{
     protected pointD3 center;
 
@@ -29,5 +31,10 @@ public class Sphere extends RadialGeometry implements Geometry{
     @Override
     public vector getNormal(pointD3 a) {
         return new vector(a.substract(center)).normalize();
+    }
+
+    @Override
+    public List<pointD3> findIntersections(ray R) {
+        return null;
     }
 }

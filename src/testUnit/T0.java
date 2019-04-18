@@ -1,5 +1,6 @@
 package testUnit;
 import primitives.*;
+import geometries.*;
 public class T0 {
     public static void main(String[] args){
         double d1= 1;
@@ -8,9 +9,12 @@ public class T0 {
         double d4 = 1234567876543.21;
         double d5 = 4.6;
         double d6 = 1.2;
-        pointD3 P1 = new pointD3(new Coordinate(1.5),new Coordinate(3),new Coordinate(0));
-        pointD3 P2 = new pointD3(new Coordinate(0),new Coordinate(2),new Coordinate(0));
+        pointD3 P1 = new pointD3(new Coordinate(2),new Coordinate(2),new Coordinate(0));
+        pointD3 P2 = new pointD3(new Coordinate(1),new Coordinate(0),new Coordinate(5));
+        pointD3 P4 = new pointD3(new Coordinate(0),new Coordinate(8),new Coordinate(8));
+        pointD3 P5 = new pointD3(new Coordinate(1),new Coordinate(1),new Coordinate(10));
         vector T1,T2;
+        Plane PL;
         T1 = new vector(P1);
         T2 = new vector(P2);
         pointD3 P3 = P1.add(T1);
@@ -40,6 +44,14 @@ public class T0 {
         System.out.println("T1.add(T2).substract(T1).equals(T2)): "+T1.add(T2).substract(T1).equals(T2));
         System.out.println("T1.multScalar(T2.length()): "+T1.multScalar(T2.length()));
         System.out.println("vector.isZero(T1.substract(T1)): "+vector.isZero(T1.substract(T1)));
-
+        PL = new Plane(P1,P2,P4);
+        System.out.println("PL: "+PL);
+        System.out.println("PL.getZofPlane(): "+PL.getZofPlane());
+        Plane PL2 = new Plane(P1,T2);
+        ray cu = new ray(P4,new vector(P5));
+        System.out.println("cu: "+cu);
+        System.out.println("PL: "+PL);
+        System.out.println("PL.getZofPlane(): "+PL.getZofPlane());
+        System.out.println("PL.findIntersections(cu).get(0): "+PL.findIntersections(cu).get(0));
     }
 }

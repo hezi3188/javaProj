@@ -1,6 +1,8 @@
 package geometries;
 import primitives.*;
 
+import java.util.List;
+
 public class Tube extends RadialGeometry implements Geometry {
     protected ray center;
 
@@ -23,6 +25,11 @@ public class Tube extends RadialGeometry implements Geometry {
 
     @Override
     public vector getNormal(pointD3 a) {
+        return null;
+    }
+
+    @Override
+    public List<pointD3> findIntersections(ray R) {
         return null;
     }
 }
