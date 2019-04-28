@@ -52,5 +52,15 @@ public class T0 {
         System.out.println("PL.findIntersections(cu).get(0): "+PL.findIntersections(cu).get(0));
         System.out.println("cu.getStart(): "+cu.getStart());
         System.out.println("PL.findIntersections(cu).get(0).distance(cu.getStart()): "+PL.findIntersections(cu).get(0).distance(cu.getStart()));
+        P1 = new pointD3(new Coordinate(0),new Coordinate(0),new Coordinate(0));
+        P2 = new pointD3(new Coordinate(5),new Coordinate(5),new Coordinate(0));
+        P4 = new pointD3(new Coordinate(10),new Coordinate(0),new Coordinate(0));
+        P5 = new pointD3(new Coordinate(6),new Coordinate(1),new Coordinate(-10));
+        pointD3 P6 = new pointD3(new Coordinate(0),new Coordinate(0),new Coordinate(1));
+        cu = new ray(P5,new vector(P6));
+        Triangle Tr = new Triangle(P1,P2,P4);
+        System.out.println("Tr.findIntersections(cu).get(0): "+Tr.findIntersections(cu).get(0));
+        Sphere S = new Sphere(20,P1);
+        System.out.println("S.findIntersections(cu).get(0): "+S.findIntersections(cu).get(0));
     }
 }
