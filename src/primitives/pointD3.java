@@ -32,6 +32,10 @@ public class pointD3 extends pointD2 {
 		super(x,y);
 		this.z=new Coordinate(z);
 	}
+	public pointD3(double x,double y,double z) {
+		super(new Coordinate(x),new Coordinate(y));
+		this.z=new Coordinate(z);
+	}
 	public  pointD3(pointD3 p){
 		super(p);
 		this.z=new Coordinate(p.z);

@@ -61,7 +61,7 @@ public class Plane implements Geometry {
         Coordinate Y1 = getCross().getPoint().getY().multiply(R.getPoint().getY());
         Coordinate Z1 = getCross().getPoint().getZ().multiply(R.getPoint().getZ());
         Coordinate SumOFAlfa = X1.add(Y1.add(Z1)).multiply(new Coordinate(-1));
-        if (SumOFAlfa.isZero()) return null;
+        //if (SumOFAlfa.isZero()) return null;
         double Alfa = SumOFNumbers.get()/SumOFAlfa.get();
 
         vector NewVec = new vector(R.getPoint()).multScalar(Alfa);
